@@ -1,4 +1,5 @@
 import logo from "./logo.svg";
+import "./index.scss";
 import Directory from "./components/Directory/directory.component";
 
 function App() {
