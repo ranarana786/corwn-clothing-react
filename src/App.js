@@ -30,7 +30,12 @@ function App() {
     },
   ];
 
-  return <Directory categories={categories} />;
+  return (
+    <div>
+      <h1>this is main</h1>
+      <Directory categories={categories} />
+    </div>
+  );
 }
 
 export default App;
