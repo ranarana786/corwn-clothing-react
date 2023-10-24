@@ -4,6 +4,7 @@ import { ReactComponent as CrwnLogo } from "../../assets/crown.svg";
 import "./navigation.style.scss";
 const Navigation = () => {
   return (
+    // Fragement tag used to render nothing on page
     <Fragment>
       <div className="navigation">
         <Link className="logo-container" to="/">

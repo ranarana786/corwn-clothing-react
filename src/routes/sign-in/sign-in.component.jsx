@@ -1,3 +1,4 @@
+// This is the sign in componenet for the authentication
 const SignIn = () => {
   return (
     <div>
