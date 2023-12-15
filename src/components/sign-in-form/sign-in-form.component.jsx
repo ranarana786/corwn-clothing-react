@@ -1,5 +1,5 @@
 import FormInput from "../form-input/form-input.component";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import Button from "../button/button.component";
 import "./sign-in-conatiner.style.scss";
 import {
@@ -10,12 +10,16 @@ import {
 //   createAuthUserEmailAndPassword,
 //   createUserDocumentFromAuth,
 // } from "../../utils/firebase/firebase.utils";
+import { UserContext } from "../../contexts/user-context/user.context";
+
 const defaultFormFields = {
   email: "",
   password: "",
 };
 const SignInForm = () => {
   console.log("Component Remount");
+
+  const { setCurrentUser } = useContext(UserContext);
 
   const [formFields, setFormFields] = useState(defaultFormFields);
 
@@ -33,11 +37,11 @@ const SignInForm = () => {
 
   const formHandler = async () => {
     try {
-      const response = await signInAuthUserWithEmailAndPassword(
+      const { user } = await signInAuthUserWithEmailAndPassword(
         email,
         password
       );
-      console.log(response);
+      setCurrentUser(user);
     } catch (error) {
       alert(error.message);
     }
