@@ -6,6 +6,7 @@ import Navigation from "./routes/navigation/navigation-component";
 import Authentication from "./routes/authentication/authentication.component";
 import { Shop } from "./routes/shop/shop.component";
 import { CheckOut } from "./routes/checkout/checkout.component";
+import Directory from "./components/Directory/directory.component";
 
 function App() {
   const categories = [
